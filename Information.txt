@@ -1,0 +1,9 @@
+* Here I have used {Web3Forms} to create a simple form that allows users to input their name, email, and text which would be redirected to the mail when you submit it
+
+* Here I have also used {React-toastify} for the toast notification when the form is submitted successfully.
+To install it we need to run the command {npm i react-toastify}
+then i added to the app.js :-      import React from 'react';
+                                   import { ToastContainer, toast } from 'react-toastify';
+
+then ToastContainer to the top of the app.js file 
+
