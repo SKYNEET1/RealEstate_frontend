@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMobileMenu, setshowMobileMenu] = useState(false);
@@ -13,6 +14,7 @@ useEffect(()=>{
         document.body.style.overflow = 'auto';
     }
     // here if we open in mobile view and then redirect to large screen then overflow will be auto.
+    // oviously this is the call back function of useEffect
     return()=>{
         document.body.style.overflow = 'auto';
     }
@@ -39,9 +41,9 @@ useEffect(()=>{
           Contact Us
           </a>
         </ul>
-        <button className="hidden md:block bg-white px-8 py-2 rounded-full border border-gray-800 hover:bg-gray-400 hover:text-white transition-all ease-in-out delay-100">
+        <Link to="/signup"> <button className="hidden md:block bg-white px-8 py-2 rounded-full border border-gray-800 hover:bg-gray-400 hover:text-white transition-all ease-in-out delay-100">
           Sign up
-        </button>
+        </button></Link>
       </div>
         <button
           onClick={() => {

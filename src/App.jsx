@@ -8,6 +8,9 @@ import Contactus from './components/Contactus'
 import React from 'react';
 import { ToastContainer} from 'react-toastify';
 import Footer from './components/Footer'
+import { Route, Routes } from 'react-router-dom'
+import Signup from './components/Signup'
+import Login from './components/Login';
 
 
 
@@ -17,13 +20,19 @@ function App() {
   return (
 
       <div className='w-full overflow-hidden'>
+
+       <Routes>
+        <Route path='/' element={<>       
        <ToastContainer/>
        <Header/>
        <About/>
        <Projects/>
        <Testimonial/>
        <Contactus/>
-       <Footer/>
+       <Footer/></>}></Route>
+        <Route path='/signup' element = {<Signup/>} ></Route>
+        <Route path='/login' element = {<Login/>} ></Route>
+       </Routes>
       </div>
      
   )
